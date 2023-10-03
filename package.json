@@ -1,0 +1,23 @@
+{
+  "name": "link-shortner-v1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "helmet": "^7.0.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nanoid": "^5.0.1",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}

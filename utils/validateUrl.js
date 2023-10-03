@@ -1,7 +1,18 @@
-const validateUrl = (url) => {
-  return /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/.test(
-    url
-  );
-};
+class ValidateUrl {
 
-module.exports = validateUrl;
+  constructor(url) {
+    this.url = url;
+  }
+
+  isUrlValid() {
+    return /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/.test(
+      this.url
+    );
+  }
+
+  setUrl(url){
+    this.url = url;
+  }
+}
+
+module.exports = ValidateUrl;

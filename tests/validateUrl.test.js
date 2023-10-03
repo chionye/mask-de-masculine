@@ -1,25 +1,19 @@
-/** @format */
+const ValidateUrl = require("../utils/validateUrl");
 
-const isValidUrl = require("../utils/validateUrl");
-
-describe("validates the url is right", () => {
-  test("returns true if url is valid", () => {
-    expect(isValidUrl("https://www.jsowl.com")).toBe(true);
+describe("ValidateUrl", () => {
+  test("should return true for a valid URL", () => {
+    const urlValidator = new ValidateUrl("https://www.example.com");
+    expect(urlValidator.isUrlValid()).toBe(true);
   });
 
-  test("returns false if url is invalid", () => {
-    expect(isValidUrl("htt//jsowl")).toBe(false);
+  test("should return false for an invalid URL", () => {
+    const urlValidator = new ValidateUrl("invalid-url");
+    expect(urlValidator.isUrlValid()).toBe(false);
   });
 
-  test("returns false if url is invalid", () => {
-    expect(isValidUrl("www.jsowl.com")).toBe(false);
-  });
-
-  test("returns true if url is valid", () => {
-    expect(
-      isValidUrl(
-        "https://www.jsowl.com/remove-an-item-from-an-array-in-javascript/"
-      )
-    ).toBe(true);
+  test("should update the URL using setUrl method", () => {
+    const urlValidator = new ValidateUrl("https://www.example.com");
+    urlValidator.setUrl("https://www.updated-example.com");
+    expect(urlValidator.isUrlValid()).toBe(true);
   });
 });

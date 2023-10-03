@@ -1,4 +1,4 @@
-const ValidateUrl = require("../utils/validateUrl");
+const ValidateUrl = require("../../services/validateUrl");
 
 describe("ValidateUrl", () => {
   test("should return true for a valid URL", () => {

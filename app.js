@@ -1,5 +1,3 @@
-/** @format */
-
 const createError = require("http-errors");
 const express = require("express");
 const logger = require("morgan");
